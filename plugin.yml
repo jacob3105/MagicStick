@@ -1,0 +1,7 @@
+name: MagicStick
+version: 0.0.1-alpha
+main: jacob3105\MagicStick\Main
+api: 5.0.0
+author: jacob3105
+depend:
+  - Customies

@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "MagicStick Resource Pack",
+        "name": "MagicStick",
+        "uuid": "aadf7ab3-056a-4121-b83e-a80eb40c4b45",
+        "version": [1, 0, 0]
+    },
+    "modules": [
+        {
+            "description": "MagicStick Resource Pack",
+            "type": "resources",
+            "uuid": "b1de0922-cde2-4dd1-9f94-3b514bc73c17",
+            "version": [1, 0, 0]
+        }
+    ]
+}

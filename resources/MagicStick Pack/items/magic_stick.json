@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "jacob:magic_stick",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "magic_stick",
+      "minecraft:render_offsets": "apple"    
+    }
+  }
+}
