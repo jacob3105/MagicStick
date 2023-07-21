@@ -68,14 +68,24 @@ class MagicStick extends Item implements ItemComponents {
         $blockFromPosition = $world->getBlock($position);
         $world->setBlock($position, $sapling);
         $random = new Random(mt_rand());
-        $treeType = match ($sapling->getTypeId()) {
-            BlockTypeIds::OAK_SAPLING => TreeType::OAK(),
-            BlockTypeIds::SPRUCE_SAPLING => TreeType::SPRUCE(),
-            BlockTypeIds::BIRCH_SAPLING => TreeType::BIRCH(),
-            BlockTypeIds::JUNGLE_SAPLING => TreeType::JUNGLE(),
-            BlockTypeIds::ACACIA_SAPLING => TreeType::ACACIA(),
-            BlockTypeIds::DARK_OAK_SAPLING => TreeType::DARK_OAK(),
-        };
+        $treeType = TreeType::OAK();
+        switch ($sapling->getTypeId()) {
+            case BlockTypeIds::SPRUCE_SAPLING:
+                $treeType = TreeType::SPRUCE();
+                break;
+            case BlockTypeIds::BIRCH_SAPLING:
+                $treeType = TreeType::BIRCH();
+                break;
+            case BlockTypeIds::JUNGLE_SAPLING:
+                $treeType = TreeType::JUNGLE();
+                break;
+            case BlockTypeIds::ACACIA_SAPLING:
+                $treeType = TreeType::ACACIA();
+                break;
+            case BlockTypeIds::DARK_OAK_SAPLING:
+                $treeType = TreeType::DARK_OAK();
+                break;
+        }
         $tree = TreeFactory::get($random, $treeType);
         $transaction = $tree?->getBlockTransaction($world, $position->getFloorX(), $position->getFloorY(), $position->getFloorZ(), $random);
         if($transaction === null) return;
