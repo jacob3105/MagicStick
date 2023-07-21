@@ -15,8 +15,6 @@ use pocketmine\utils\SingletonTrait;
 class Main extends PluginBase {
     use SingletonTrait;
 
-    protected static ResourcePack $pack;
-
     protected function onEnable(): void {
         self::setInstance($this);
         ResourcePackManager::registerResourcePack($this);

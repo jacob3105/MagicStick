@@ -1,2 +1,5 @@
 # MagicStick
-Plugin for PocketMine-MP that grow plants in an unusual way.
+A stick can help you plant a tree, which will grow immediately.
+
+# Contact
+**You can contact me directly via Discord `taylor.r`**
