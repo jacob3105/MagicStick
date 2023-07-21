@@ -7,7 +7,7 @@ namespace jacob3105\MagicStick;
 use customiesdevs\customies\item\CustomiesItemFactory;
 use jacob3105\MagicStick\item\MagicStick;
 use jacob3105\MagicStick\listeners\EventListener;
-use libCustomPack\libCustomPack;
+use NhanAZ\libBedrock\ResourcePackManager;
 use pocketmine\plugin\PluginBase;
 use pocketmine\resourcepacks\ResourcePack;
 use pocketmine\utils\SingletonTrait;
@@ -19,12 +19,12 @@ class Main extends PluginBase {
 
     protected function onEnable(): void {
         self::setInstance($this);
-        libCustomPack::registerResourcePack(self::$pack = libCustomPack::generatePackFromResources($this));
+        ResourcePackManager::registerResourcePack($this);
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         CustomiesItemFactory::getInstance()->registerItem(MagicStick::class, "jacob:magic_stick", "Magic Stick");
     }
 
     protected function onDisable(): void {
-        libCustomPack::unregisterResourcePack(self::$pack);
+        ResourcePackManager::unregisterResourcePack($this);
     }
 }
