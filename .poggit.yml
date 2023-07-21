@@ -5,7 +5,7 @@ branches:
 projects:
   MagicStick:
     path: ""
-    icon: icon.png
+    icon: icon.gif
     libs:
       - src: NhanAZ/libBedrock/libBedrock
         version: 1.1.7
